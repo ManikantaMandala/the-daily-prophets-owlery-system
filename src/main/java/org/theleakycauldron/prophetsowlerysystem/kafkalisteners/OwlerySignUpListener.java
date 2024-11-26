@@ -15,7 +15,7 @@ import org.theleakycauldron.prophetsowlerysystem.dtos.SignUpEmailDto;
 public class OwlerySignUpListener {
 
 
-    @KafkaListener(topics = "user-signup-email", id = "owlery")
+    @KafkaListener(topics = "user-signup-email", id = "login")
     public void listen(ConsumerRecord<String, SignUpEmailDto> dto){
         System.out.println(dto.value());
     }
